@@ -8,7 +8,7 @@
 *
 *
 *******************************************************************************
-* Copyright 2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -41,7 +41,6 @@
 *******************************************************************************/
 
 #include "cy_pdl.h"
-#include "cyhal.h"
 #include "cybsp.h"
 #include "cy_usb_dev.h"
 #include "cycfg_usbdev.h"
@@ -204,7 +203,7 @@ int main(void)
                                    CY_USB_DEV_WAIT_FOREVER, &usb_devContext);
 
         /* Wait for 10 ms */
-        cyhal_system_delay_ms(10UL);
+        Cy_SysLib_Delay(10UL);
     }
 }
 
